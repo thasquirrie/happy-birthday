@@ -23,7 +23,8 @@ const animationTimeline = () => {
     opacity: 0,
     y: 20,
     rotationY: 5,
-    skewX: "-15deg"
+    skewX: "-15deg",
+    delay: 0.4,
   };
 
   const tl = new TimelineMax();
@@ -36,9 +37,10 @@ const animationTimeline = () => {
       opacity: 0,
       y: 10
     })
-    .from(".two", 0.4, {
+    .from(".two", 0.5, {
       opacity: 0,
-      y: 10
+      y: 10,
+      delay: 0.4
     })
     .to(
       ".one",
@@ -60,21 +62,24 @@ const animationTimeline = () => {
     )
     .from(".three", 0.7, {
       opacity: 0,
-      y: 10
-      // scale: 0.7
+      y: 10,
+      delay: 0.5,
+      scale: 0.7
     })
     .to(
       ".three",
       0.7,
       {
         opacity: 0,
-        y: 10
+        y: 10,
+        delay: 0.5,
       },
       "+=2"
     )
     .from(".four", 0.7, {
       scale: 0.2,
-      opacity: 0
+      opacity: 0,
+      delay: 0.5
     })
     .from(".fake-btn", 0.3, {
       scale: 0.2,
@@ -109,7 +114,7 @@ const animationTimeline = () => {
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
       x: 10,
-      backgroundColor: "rgb(21, 161, 237)",
+      backgroundColor: "rgb(46, 239, 87)",
       color: "#fff"
     })
     .to(".idea-3", 0.7, ideaTextTransLeave, "+=1.5")
